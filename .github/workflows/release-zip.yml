@@ -19,21 +19,21 @@ jobs:
 
       - name: Create clean package directory
         run: |
-          mkdir -p build/weekly-wildcat
+          mkdir -p build/linea
           rsync -av \
             --exclude='.git' \
             --exclude='.github' \
             --exclude='build' \
             --exclude='node_modules' \
             --exclude='vendor' \
-            ./ build/weekly-wildcat/
+            ./ build/linea/
 
       - name: Create ZIP
         run: |
           cd build
-          zip -r weekly-wildcat.zip weekly-wildcat
+          zip -r linea.zip linea
 
       - name: Publish GitHub release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release create "$GITHUB_REF_NAME" build/weekly-wildcat.zip --generate-notes
+        run: gh release create "$GITHUB_REF_NAME" build/linea.zip --generate-notes

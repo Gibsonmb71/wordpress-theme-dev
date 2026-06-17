@@ -1,6 +1,6 @@
 # Theme Modules
 
-Weekly Wildcat ships reusable native block patterns for common newspaper modules.
+Linea ships reusable native block patterns for common newspaper modules.
 
 ## Homepage modules
 

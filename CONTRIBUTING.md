@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping improve Weekly Wildcat.
+Thanks for helping improve Linea.
 
 ## Development approach
 

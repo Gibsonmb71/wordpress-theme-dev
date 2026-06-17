@@ -221,7 +221,7 @@
       ]
     },
     "custom": {
-      "weeklyWildcat": {
+      "linea": {
         "measure": "66ch",
         "hairline": "1px solid var(--wp--preset--color--line)"
       }

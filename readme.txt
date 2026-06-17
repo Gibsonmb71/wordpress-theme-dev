@@ -1,5 +1,5 @@
-=== Weekly Wildcat ===
-Contributors: weeklywildcat
+=== Linea ===
+Contributors: linea
 Requires at least: 6.5
 Tested up to: 6.9
 Requires PHP: 8.1
@@ -11,16 +11,16 @@ A modern WordPress block theme for student newspaper and school journalism websi
 
 == Description ==
 
-Weekly Wildcat is a native WordPress block theme built for student newspapers. It includes a newspaper masthead, responsive front-page patterns, archive/search templates, author pages, article footer modules, comments, and style variations.
+Linea is a native WordPress block theme built for student newspapers. It includes a newspaper masthead, responsive front-page patterns, archive/search templates, author pages, article footer modules, comments, and style variations.
 
 The theme focuses on native WordPress tools: templates, template parts, patterns, Query Loop blocks, and theme.json.
 
 == Installation ==
 
-1. Upload the theme folder to wp-content/themes/weekly-wildcat.
-2. Activate Weekly Wildcat from Appearance > Themes.
+1. Upload the theme folder to wp-content/themes/linea.
+2. Activate Linea from Appearance > Themes.
 3. Customize the theme in Appearance > Editor.
 
 == Copyright ==
 
-Weekly Wildcat is distributed under the terms of the GNU GPL.
+Linea is distributed under the terms of the GNU GPL.

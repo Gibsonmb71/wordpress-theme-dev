@@ -28,22 +28,22 @@ jobs:
 
       - name: Create clean package directory
         run: |
-          mkdir -p build/weekly-wildcat
+          mkdir -p build/linea
           rsync -av \
             --exclude='.git' \
             --exclude='.github' \
             --exclude='build' \
             --exclude='node_modules' \
             --exclude='vendor' \
-            ./ build/weekly-wildcat/
+            ./ build/linea/
 
       - name: Create ZIP artifact
         run: |
           cd build
-          zip -r weekly-wildcat.zip weekly-wildcat
+          zip -r linea.zip linea
 
       - name: Upload ZIP artifact
         uses: actions/upload-artifact@v4
         with:
-          name: weekly-wildcat-theme
-          path: build/weekly-wildcat.zip
+          name: linea-theme
+          path: build/linea.zip

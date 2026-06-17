@@ -1,17 +1,17 @@
 <?php
 /**
  * Title: Breaking news banner
- * Slug: weekly-wildcat/breaking-news-banner
- * Categories: weekly-wildcat-homepage, weekly-wildcat-modules
+ * Slug: linea/breaking-news-banner
+ * Categories: linea-homepage, linea-modules
  * Description: A prominent editable alert banner for urgent newsroom updates.
  */
 ?>
-<!-- wp:group {"align":"wide","className":"ww-breaking","style":{"spacing":{"padding":{"top":"var:preset|spacing|40","right":"var:preset|spacing|50","bottom":"var:preset|spacing|40","left":"var:preset|spacing|50"},"margin":{"bottom":"var:preset|spacing|50"}},"border":{"color":"var:preset|color|line","width":"1px"}},"backgroundColor":"newsprint","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
-<div class="wp-block-group alignwide ww-breaking has-border-color has-line-border-color has-newsprint-background-color has-background" style="border-width:1px;margin-bottom:var(--wp--preset--spacing--50);padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--50)">
+<!-- wp:group {"align":"wide","className":"linea-breaking","style":{"spacing":{"padding":{"top":"var:preset|spacing|40","right":"var:preset|spacing|50","bottom":"var:preset|spacing|40","left":"var:preset|spacing|50"},"margin":{"bottom":"var:preset|spacing|50"}},"border":{"color":"var:preset|color|line","width":"1px"}},"backgroundColor":"newsprint","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
+<div class="wp-block-group alignwide linea-breaking has-border-color has-line-border-color has-newsprint-background-color has-background" style="border-width:1px;margin-bottom:var(--wp--preset--spacing--50);padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--50)">
 	<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap"}} -->
 	<div class="wp-block-group">
-		<!-- wp:paragraph {"className":"ww-alert-label","textColor":"accent"} -->
-		<p class="ww-alert-label has-accent-color has-text-color">Breaking</p>
+		<!-- wp:paragraph {"className":"linea-alert-label","textColor":"accent"} -->
+		<p class="linea-alert-label has-accent-color has-text-color">Breaking</p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:paragraph {"fontSize":"medium"} -->

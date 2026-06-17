@@ -1,10 +1,10 @@
-# Weekly Wildcat Theme Setup
+# Linea Theme Setup
 
 ## Local testing
 
 1. Install WordPress locally or use a staging site.
-2. Put this repository in `wp-content/themes/weekly-wildcat/`.
-3. Activate **Weekly Wildcat** in **Appearance → Themes**.
+2. Put this repository in `wp-content/themes/linea/`.
+3. Activate **Linea** in **Appearance → Themes**.
 4. Open **Appearance → Editor** to adjust templates, template parts, styles, and patterns.
 
 ## Recommended first WordPress setup
@@ -35,4 +35,4 @@ The theme includes style variations that can be selected from the WordPress Site
 
 Pull requests receive a WordPress Playground preview button so editors and contributors can test the theme without setting up a local WordPress install. Every pull request also builds an installable ZIP artifact.
 
-For releases, update the version numbers, create a `v*` tag, and push it. The release workflow packages the theme into `weekly-wildcat.zip` and attaches it to a GitHub release.
+For releases, update the version numbers, create a `v*` tag, and push it. The release workflow packages the theme into `linea.zip` and attaches it to a GitHub release.

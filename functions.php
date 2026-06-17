@@ -1,20 +1,20 @@
 <?php
 /**
- * Weekly Wildcat theme functions.
+ * Linea theme functions.
  *
- * @package WeeklyWildcat
+ * @package Linea
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'WEEKLY_WILDCAT_VERSION', '0.5.0' );
+define( 'LINEA_VERSION', '0.5.0' );
 
 /**
  * Theme setup.
  */
-function weekly_wildcat_setup() {
+function linea_setup() {
 	add_theme_support( 'wp-block-styles' );
 	add_theme_support( 'editor-styles' );
 	add_theme_support( 'responsive-embeds' );
@@ -27,55 +27,55 @@ function weekly_wildcat_setup() {
 
 	add_editor_style( 'assets/css/editor.css' );
 }
-add_action( 'after_setup_theme', 'weekly_wildcat_setup' );
+add_action( 'after_setup_theme', 'linea_setup' );
 
 /**
  * Enqueue front-end assets.
  */
-function weekly_wildcat_enqueue_assets() {
+function linea_enqueue_assets() {
 	wp_enqueue_style(
-		'weekly-wildcat-style',
+		'linea-style',
 		get_stylesheet_uri(),
 		array(),
-		WEEKLY_WILDCAT_VERSION
+		LINEA_VERSION
 	);
 }
-add_action( 'wp_enqueue_scripts', 'weekly_wildcat_enqueue_assets' );
+add_action( 'wp_enqueue_scripts', 'linea_enqueue_assets' );
 
 /**
  * Register custom block pattern categories.
  */
-function weekly_wildcat_register_pattern_categories() {
+function linea_register_pattern_categories() {
 	register_block_pattern_category(
-		'weekly-wildcat-homepage',
+		'linea-homepage',
 		array(
-			'label'       => __( 'Weekly Wildcat Homepage', 'weekly-wildcat' ),
-			'description' => __( 'Homepage patterns for student newspaper layouts.', 'weekly-wildcat' ),
+			'label'       => __( 'Linea Homepage', 'linea' ),
+			'description' => __( 'Homepage patterns for student newspaper layouts.', 'linea' ),
 		)
 	);
 
 	register_block_pattern_category(
-		'weekly-wildcat-sections',
+		'linea-sections',
 		array(
-			'label'       => __( 'Weekly Wildcat Sections', 'weekly-wildcat' ),
-			'description' => __( 'Reusable story grids, section lists, and newspaper modules.', 'weekly-wildcat' ),
+			'label'       => __( 'Linea Sections', 'linea' ),
+			'description' => __( 'Reusable story grids, section lists, and newspaper modules.', 'linea' ),
 		)
 	);
 
 	register_block_pattern_category(
-		'weekly-wildcat-articles',
+		'linea-articles',
 		array(
-			'label'       => __( 'Weekly Wildcat Articles', 'weekly-wildcat' ),
-			'description' => __( 'Article endings, author modules, comments, and related-story patterns.', 'weekly-wildcat' ),
+			'label'       => __( 'Linea Articles', 'linea' ),
+			'description' => __( 'Article endings, author modules, comments, and related-story patterns.', 'linea' ),
 		)
 	);
 
 	register_block_pattern_category(
-		'weekly-wildcat-modules',
+		'linea-modules',
 		array(
-			'label'       => __( 'Weekly Wildcat Modules', 'weekly-wildcat' ),
-			'description' => __( 'Reusable callouts, alerts, photo strips, and newsroom modules.', 'weekly-wildcat' ),
+			'label'       => __( 'Linea Modules', 'linea' ),
+			'description' => __( 'Reusable callouts, alerts, photo strips, and newsroom modules.', 'linea' ),
 		)
 	);
 }
-add_action( 'init', 'weekly_wildcat_register_pattern_categories' );
+add_action( 'init', 'linea_register_pattern_categories' );
