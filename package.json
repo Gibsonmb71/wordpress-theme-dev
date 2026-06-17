@@ -1,6 +1,6 @@
 {
   "name": "linea-theme",
-  "version": "0.5.0",
+	"version": "0.5.1",
   "private": true,
   "description": "A modern WordPress block theme for student newspaper and school journalism websites.",
   "type": "module",
