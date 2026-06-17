@@ -22,8 +22,8 @@
 
 	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 	<div class="wp-block-buttons">
-		<!-- wp:button -->
-		<div class="wp-block-button"><a class="wp-block-button__link wp-element-button">Subscribe or learn more</a></div>
+		<!-- wp:button {"url":"/"} -->
+		<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/">Subscribe or learn more</a></div>
 		<!-- /wp:button -->
 	</div>
 	<!-- /wp:buttons -->
