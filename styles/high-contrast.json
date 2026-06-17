@@ -1,0 +1,54 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "title": "High Contrast",
+  "settings": {
+    "color": {
+      "palette": [
+        {
+          "name": "Ink",
+          "slug": "ink",
+          "color": "#000000"
+        },
+        {
+          "name": "Paper",
+          "slug": "paper",
+          "color": "#ffffff"
+        },
+        {
+          "name": "Newsprint",
+          "slug": "newsprint",
+          "color": "#f2f2f2"
+        },
+        {
+          "name": "Line",
+          "slug": "line",
+          "color": "#000000"
+        },
+        {
+          "name": "Muted",
+          "slug": "muted",
+          "color": "#333333"
+        },
+        {
+          "name": "Accent",
+          "slug": "accent",
+          "color": "#b00020"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var:preset|color|paper",
+      "text": "var:preset|color|ink"
+    },
+    "elements": {
+      "link": {
+        "typography": {
+          "textDecoration": "underline"
+        }
+      }
+    }
+  }
+}
