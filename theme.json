@@ -280,6 +280,11 @@
           "lineHeight": "1.05"
         }
       },
+      "core/post-excerpt": {
+        "typography": {
+          "lineHeight": "1.45"
+        }
+      },
       "core/post-terms": {
         "typography": {
           "fontFamily": "var:preset|font-family|condensed-sans",
@@ -293,6 +298,11 @@
         "typography": {
           "fontFamily": "var:preset|font-family|condensed-sans",
           "fontWeight": "700"
+        }
+      },
+      "core/search": {
+        "typography": {
+          "fontFamily": "var:preset|font-family|system-sans"
         }
       },
       "core/separator": {
@@ -312,15 +322,6 @@
       "name": "footer",
       "title": "Footer",
       "area": "footer"
-    }
-  ],
-  "customTemplates": [
-    {
-      "name": "front-page",
-      "title": "Newspaper Front Page",
-      "postTypes": [
-        "page"
-      ]
     }
   ]
 }
