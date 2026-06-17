@@ -1,0 +1,30 @@
+name: PR Preview - Build
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - edited
+
+jobs:
+  build:
+    uses: WordPress/action-wp-playground-pr-preview/.github/workflows/preview-build.yml@v3
+    with:
+      artifacts: linea=build/linea.zip
+      node-version: '22'
+      build-command: |
+        mkdir -p build/linea
+        rsync -av \
+          --exclude='.git' \
+          --exclude='.github' \
+          --exclude='build' \
+          --exclude='node_modules' \
+          --exclude='vendor' \
+          --exclude='tools' \
+          --exclude='package.json' \
+          --exclude='package-lock.json' \
+          ./ build/linea/
+        cd build
+        zip -r linea.zip linea

@@ -41,7 +41,7 @@ This repo includes GitHub Actions workflows for theme maintenance:
 - `Theme checks` validates PHP syntax, JSON files, required block-theme files, pattern headers, accessibility anchors, search labels, and placeholder links.
 - `WordPress theme review` runs the official WordPress Theme Check action in CI.
 - `Build theme ZIP` creates a clean installable ZIP artifact on pull requests.
-- `WordPress Playground preview` adds a browser preview button to pull requests.
+- `PR Preview - Build` and `PR Preview - Publish` build a public installable ZIP and add a working WordPress Playground preview button to pull requests.
 - `Release theme ZIP` publishes a packaged ZIP when a `v*` tag is pushed.
 
 ## Release workflow
