@@ -6,8 +6,12 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+
 jobs:
   validate:
+    name: Validate theme files
     runs-on: ubuntu-latest
 
     steps:
@@ -26,10 +30,29 @@ jobs:
           test -f index.php
           test -f theme.json
           test -f templates/index.html
+          test -d parts
+          test -d patterns
 
       - name: Check pattern headers
         run: |
           for file in patterns/*.php; do
             grep -q "Title:" "$file"
             grep -q "Slug:" "$file"
+            grep -q "Categories:" "$file"
           done
+
+      - name: Check template accessibility anchors
+        run: |
+          grep -q 'href="#content"' parts/header.html
+          grep -q 'id="content"' templates/*.html
+          grep -q ':focus-visible' style.css
+
+      - name: Check search labels
+        run: |
+          grep -q '"label":"Search the newspaper"' templates/search.html
+          grep -q '"showLabel":true' templates/search.html
+          grep -q '"showLabel":true' templates/404.html
+
+      - name: Check placeholder links
+        run: |
+          ! grep -R 'href="#"' . --exclude-dir=.git

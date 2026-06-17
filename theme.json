@@ -15,6 +15,8 @@
       "width": true
     },
     "color": {
+      "custom": false,
+      "customGradient": false,
       "defaultDuotone": false,
       "defaultGradients": false,
       "palette": [
@@ -41,7 +43,7 @@
         {
           "name": "Muted",
           "slug": "muted",
-          "color": "#65605a"
+          "color": "#5f5a54"
         },
         {
           "name": "Accent",
@@ -67,11 +69,31 @@
           "name": "Section Purple",
           "slug": "section-purple",
           "color": "#68418d"
+        },
+        {
+          "name": "Warning",
+          "slug": "warning",
+          "color": "#ffd54f"
         }
       ]
     },
     "dimensions": {
       "minHeight": true
+    },
+    "shadow": {
+      "defaultPresets": false,
+      "presets": [
+        {
+          "name": "Soft",
+          "slug": "soft",
+          "shadow": "0 0.5rem 1.5rem rgb(17 17 17 / 0.08)"
+        },
+        {
+          "name": "Rule",
+          "slug": "rule",
+          "shadow": "0 1px 0 var(--wp--preset--color--line)"
+        }
+      ]
     },
     "spacing": {
       "blockGap": true,
@@ -120,12 +142,24 @@
           "name": "8",
           "slug": "80",
           "size": "4rem"
+        },
+        {
+          "name": "9",
+          "slug": "90",
+          "size": "6rem"
         }
       ]
     },
     "typography": {
-      "fluid": true,
+      "customFontSize": false,
       "dropCap": true,
+      "fluid": true,
+      "fontStyle": true,
+      "fontWeight": true,
+      "letterSpacing": true,
+      "lineHeight": true,
+      "textDecoration": true,
+      "textTransform": true,
       "fontFamilies": [
         {
           "fontFamily": "Georgia, 'Times New Roman', serif",
@@ -185,6 +219,12 @@
           "size": "clamp(2.6rem, 9vw, 6rem)"
         }
       ]
+    },
+    "custom": {
+      "weeklyWildcat": {
+        "measure": "66ch",
+        "hairline": "1px solid var(--wp--preset--color--line)"
+      }
     }
   },
   "styles": {
@@ -221,8 +261,8 @@
           "fontFamily": "var:preset|font-family|condensed-sans",
           "fontSize": "var:preset|font-size|small",
           "fontWeight": "700",
-          "textTransform": "uppercase",
-          "letterSpacing": "0.04em"
+          "letterSpacing": "0.04em",
+          "textTransform": "uppercase"
         }
       },
       "caption": {
@@ -230,7 +270,8 @@
           "text": "var:preset|color|muted"
         },
         "typography": {
-          "fontSize": "var:preset|font-size|small"
+          "fontSize": "var:preset|font-size|small",
+          "lineHeight": "1.35"
         }
       },
       "heading": {
@@ -260,11 +301,22 @@
           "text": "var:preset|color|ink"
         },
         "typography": {
-          "textDecoration": "none"
+          "textDecoration": "underline"
         }
       }
     },
     "blocks": {
+      "core/button": {
+        "border": {
+          "radius": "0"
+        },
+        "typography": {
+          "fontFamily": "var:preset|font-family|condensed-sans",
+          "fontWeight": "700",
+          "letterSpacing": "0.04em",
+          "textTransform": "uppercase"
+        }
+      },
       "core/navigation": {
         "typography": {
           "fontFamily": "var:preset|font-family|condensed-sans",
@@ -294,6 +346,35 @@
           "textTransform": "uppercase"
         }
       },
+      "core/pullquote": {
+        "border": {
+          "color": "var:preset|color|accent",
+          "style": "solid",
+          "width": "0 0 0 4px"
+        },
+        "spacing": {
+          "padding": {
+            "left": "var:preset|spacing|50"
+          }
+        },
+        "typography": {
+          "fontFamily": "var:preset|font-family|serif",
+          "fontSize": "var:preset|font-size|large",
+          "lineHeight": "1.25"
+        }
+      },
+      "core/quote": {
+        "border": {
+          "color": "var:preset|color|line",
+          "style": "solid",
+          "width": "0 0 0 3px"
+        },
+        "spacing": {
+          "padding": {
+            "left": "var:preset|spacing|40"
+          }
+        }
+      },
       "core/query-pagination": {
         "typography": {
           "fontFamily": "var:preset|font-family|condensed-sans",
@@ -309,6 +390,12 @@
         "color": {
           "background": "var:preset|color|line"
         }
+      },
+      "core/table": {
+        "typography": {
+          "fontSize": "var:preset|font-size|small",
+          "lineHeight": "1.45"
+        }
       }
     }
   },
@@ -322,6 +409,11 @@
       "name": "footer",
       "title": "Footer",
       "area": "footer"
+    },
+    {
+      "name": "comments",
+      "title": "Comments",
+      "area": "uncategorized"
     }
   ]
 }

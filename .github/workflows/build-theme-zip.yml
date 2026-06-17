@@ -1,0 +1,49 @@
+name: Build theme ZIP
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - '**.php'
+      - '**.css'
+      - '**.json'
+      - 'templates/**'
+      - 'parts/**'
+      - 'patterns/**'
+      - 'styles/**'
+      - 'readme.txt'
+      - 'screenshot.png'
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    name: Package theme
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create clean package directory
+        run: |
+          mkdir -p build/weekly-wildcat
+          rsync -av \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='build' \
+            --exclude='node_modules' \
+            --exclude='vendor' \
+            ./ build/weekly-wildcat/
+
+      - name: Create ZIP artifact
+        run: |
+          cd build
+          zip -r weekly-wildcat.zip weekly-wildcat
+
+      - name: Upload ZIP artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-wildcat-theme
+          path: build/weekly-wildcat.zip
