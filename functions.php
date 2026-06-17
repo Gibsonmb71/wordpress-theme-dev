@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'WEEKLY_WILDCAT_VERSION', '0.2.1' );
+define( 'WEEKLY_WILDCAT_VERSION', '0.3.0' );
 
 /**
  * Theme setup.
@@ -21,6 +21,8 @@ function weekly_wildcat_setup() {
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'automatic-feed-links' );
+	add_theme_support( 'custom-logo' );
+	add_theme_support( 'html5', array( 'comment-form', 'comment-list', 'gallery', 'caption', 'style', 'script', 'navigation-widgets' ) );
 
 	add_editor_style( 'assets/css/editor.css' );
 }
@@ -56,6 +58,14 @@ function weekly_wildcat_register_pattern_categories() {
 		array(
 			'label'       => __( 'Weekly Wildcat Sections', 'weekly-wildcat' ),
 			'description' => __( 'Reusable story grids, section lists, and newspaper modules.', 'weekly-wildcat' ),
+		)
+	);
+
+	register_block_pattern_category(
+		'weekly-wildcat-articles',
+		array(
+			'label'       => __( 'Weekly Wildcat Articles', 'weekly-wildcat' ),
+			'description' => __( 'Article endings, author modules, comments, and related-story patterns.', 'weekly-wildcat' ),
 		)
 	);
 }

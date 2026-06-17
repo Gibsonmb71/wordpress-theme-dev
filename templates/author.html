@@ -1,0 +1,20 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","anchor":"content","style":{"spacing":{"padding":{"top":"2rem","bottom":"4rem"}}},"layout":{"type":"constrained"}} -->
+<main id="content" class="wp-block-group" style="padding-top:2rem;padding-bottom:4rem">
+	<!-- wp:group {"className":"ww-author-card","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","right":"var:preset|spacing|60","bottom":"var:preset|spacing|60","left":"var:preset|spacing|60"},"margin":{"bottom":"var:preset|spacing|70"}}},"backgroundColor":"newsprint","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group ww-author-card has-newsprint-background-color has-background" style="margin-bottom:var(--wp--preset--spacing--70);padding-top:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--60)">
+		<!-- wp:query-title {"type":"archive","className":"ww-author-title","fontSize":"xx-large"} /-->
+		<!-- wp:term-description {"textColor":"muted"} /-->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:heading {"className":"ww-section-heading","level":2} -->
+	<h2 class="wp-block-heading ww-section-heading">Stories by this writer</h2>
+	<!-- /wp:heading -->
+
+	<!-- wp:pattern {"slug":"weekly-wildcat/archive-query-grid"} /-->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
