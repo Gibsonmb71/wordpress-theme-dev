@@ -1,6 +1,10 @@
-# Linea WordPress Theme
-
-A modern WordPress block theme for student newspaper and school journalism websites.
+<p align="center">
+  <img src="assets/logo-dark-text.svg#gh-light-mode-only" alt="Linea" width="280">
+  <img src="assets/logo-light-text.svg#gh-dark-mode-only" alt="Linea" width="280">
+</p>
+<p align="center">
+A modern WordPress block theme, created by the Weekly Wildcat development team to help school newsrooms publish sharp, fast, and flexible journalism sites.
+</p>
 
 ## Status
 
