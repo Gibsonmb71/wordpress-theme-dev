@@ -17,7 +17,7 @@
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"className":"linea-view-all","fontSize":"x-small"} -->
-			<p class="linea-view-all has-x-small-font-size">View all</p>
+			<p class="linea-view-all has-x-small-font-size"><a href="/category/sports/">View all</a></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->
@@ -48,7 +48,7 @@
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"className":"linea-view-all","fontSize":"x-small"} -->
-			<p class="linea-view-all has-x-small-font-size">View all</p>
+			<p class="linea-view-all has-x-small-font-size"><a href="/category/student-life/">View all</a></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->
@@ -79,7 +79,7 @@
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"className":"linea-view-all","fontSize":"x-small"} -->
-			<p class="linea-view-all has-x-small-font-size">View all</p>
+			<p class="linea-view-all has-x-small-font-size"><a href="/category/features/">View all</a></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->
