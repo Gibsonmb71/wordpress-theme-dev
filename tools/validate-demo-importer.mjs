@@ -1,13 +1,14 @@
 import { readFileSync } from 'node:fs';
 
 const importerPath = 'demo-content/importer.php';
+const wxrPath = 'demo-content/linea-demo-content.xml';
 const importer = readFileSync(importerPath, 'utf8');
+const wxr = readFileSync(wxrPath, 'utf8');
 const errors = [];
 
 const definitions = new Set(
 	[...importer.matchAll(/function\s+(linea_(?:import_demo_content|demo_[a-z0-9_]+))\s*\(/g)].map((match) => match[1])
 );
-
 const calls = new Set(
 	[...importer.matchAll(/\b(linea_(?:import_demo_content|demo_[a-z0-9_]+))\s*\(/g)].map((match) => match[1])
 );
@@ -32,12 +33,20 @@ for (const required of [
 	}
 }
 
-if (!importer.includes('_linea_demo_story')) {
-	errors.push(`${importerPath} must mark generated posts so imports stay idempotent.`);
+for (const marker of ['_linea_demo_story', '_linea_demo_placeholder']) {
+	if (!importer.includes(marker)) {
+		errors.push(`${importerPath} is missing idempotency marker ${marker}.`);
+	}
 }
 
-if (!importer.includes('_linea_demo_placeholder')) {
-	errors.push(`${importerPath} must mark generated media so imports stay idempotent.`);
+for (const requiredXml of ['<rss', '<channel>', '<wp:wxr_version>1.2</wp:wxr_version>', '</channel>', '</rss>']) {
+	if (!wxr.includes(requiredXml)) {
+		errors.push(`${wxrPath} is missing ${requiredXml}.`);
+	}
+}
+
+if (!/<item>[\s\S]*<wp:post_type><!\[CDATA\[post\]\]><\/wp:post_type>[\s\S]*<\/item>/.test(wxr)) {
+	errors.push(`${wxrPath} must include at least one post item.`);
 }
 
 if (errors.length) {
@@ -45,4 +54,4 @@ if (errors.length) {
 	process.exit(1);
 }
 
-console.log(`Validated ${importerPath} helper coverage and idempotency markers.`);
+console.log(`Validated ${importerPath} helpers and ${wxrPath} structure.`);
