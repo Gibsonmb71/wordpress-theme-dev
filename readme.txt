@@ -1,6 +1,6 @@
 === Linea ===
 Contributors: linea
-Requires at least: 6.5
+Requires at least: 6.6
 Tested up to: 6.9
 Requires PHP: 8.1
 License: GPLv2 or later
