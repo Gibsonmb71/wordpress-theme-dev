@@ -33,6 +33,26 @@ function walkBlocks(blocks, visitor) {
 	}
 }
 
+const themeJson = JSON.parse(readFileSync(join(root, 'theme.json'), 'utf8'));
+if (themeJson.version !== 3) {
+	errors.push('theme.json must use schema version 3.');
+}
+
+const readme = readFileSync(join(root, 'readme.txt'), 'utf8');
+if (!readme.includes('Requires at least: 6.6')) {
+	errors.push('readme.txt must require WordPress 6.6+ for theme.json v3 support.');
+}
+
+const functionsPhp = readFileSync(join(root, 'functions.php'), 'utf8');
+if (!functionsPhp.includes("add_theme_support( 'editor-styles' )")) {
+	errors.push('functions.php must enable editor-styles support before calling add_editor_style().');
+}
+
+const searchPattern = readFileSync(join(root, 'patterns', 'search-query-list.php'), 'utf8');
+if (!searchPattern.includes('wp:query-no-results')) {
+	errors.push('patterns/search-query-list.php must include a query-no-results fallback.');
+}
+
 const patternFiles = filesIn('patterns', [ '.php' ]);
 const patternSlugs = new Set();
 
@@ -42,6 +62,9 @@ for (const file of patternFiles) {
 	if (!slug) {
 		errors.push(`${relative(root, file)} is missing a pattern Slug header.`);
 		continue;
+	}
+	if (!slug.startsWith('linea/')) {
+		errors.push(`${relative(root, file)} uses the pattern slug "${slug}" instead of the linea/ namespace.`);
 	}
 	patternSlugs.add(slug);
 }
